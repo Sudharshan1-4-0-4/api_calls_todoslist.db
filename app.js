@@ -17,8 +17,8 @@ const initialiseDbandServer = async () => {
       filename: dbPath,
       driver: sqlite3.Database,
     });
-    app.listen(3000, () => {
-      console.log("Server is running at 3000!!!");
+    app.listen(process.env.PORT || 3005, () => {
+      console.log("Server is running at 3005!!!");
     });
   } catch (e) {
     console.log(`Server error ${e.message}`);
